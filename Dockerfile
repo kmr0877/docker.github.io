@@ -41,7 +41,7 @@ ENV DISTRIBUTION_SVN_BRANCH=branches/${DISTRIBUTION_BRANCH}
 
 
 # Reset to alpine so we don't get any docs source or extra apps
-FROM nginx:alpine AS deploybase
+FROM nginx:1.21-alpine AS deploybase
 ENV TARGET=/usr/share/nginx/html
 
 # Get the nginx config from the nginx-onbuild image
